@@ -13,7 +13,7 @@ document.getElementById('pptxForm').addEventListener('submit', async (e) => {
     formData.append('template', document.getElementById('template').files[0]);
 
     try {
-        const response = await fetch('http://localhost:8000/api/generate', {
+        const response = await fetch('/api/generate', {
             method: 'POST',
             body: formData
         });
