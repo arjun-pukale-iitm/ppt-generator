@@ -21,7 +21,9 @@ app.add_middleware(
 # Serve static files (HTML, CSS, JS)
 app.mount("/static", StaticFiles(directory="static", html=True), name="static")
 
-
+@app.get("/")
+def hello():
+    return "hello, go to /static"
 
 @app.post("/api/generate")
 async def generate_pptx(
