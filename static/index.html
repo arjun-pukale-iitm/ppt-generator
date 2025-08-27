@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPTX Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>PPTX Builder</h1>
+        <p class="subtitle">Turn your text or markdown into a fully formatted PowerPoint</p>
+
+        <form id="pptxForm">
+            <label for="text">Paste your text/markdown:</label>
+            <textarea id="text" name="text" required placeholder="Paste your text here..."></textarea>
+
+            <label for="guidance">Optional guidance (tone/use case):</label>
+            <input type="text" id="guidance" name="guidance" placeholder="e.g. Turn into an investor pitch deck">
+
+            <label for="provider">LLM Provider:</label>
+            <select id="provider" name="provider">
+                <option value="openrouter">OpenRouter(AIPIPE)</option>
+                <option value="openai">OpenAI</option>
+                <option value="anthropic">Anthropic</option>
+                <option value="gemini" selected>Gemini</option>
+            </select>
+
+            <label for="api_key">Your API Key:</label>
+            <input type="password" id="api_key" name="api_key" required placeholder="Enter your API key">
+
+            <label for="template">Upload PPTX/POTX Template:</label>
+            <input type="file" id="template" name="template" accept=".pptx,.potx" required>
+
+            <button type="submit">Generate Presentation</button>
+        </form>
+
+        <div id="status"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
