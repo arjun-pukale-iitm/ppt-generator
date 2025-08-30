@@ -55,6 +55,19 @@ Guidance: {guidance}
 Text to convert into slides:
 {text}
 
+--- IMPORTANT INSTRUCTIONS ---
+- Always produce a coherent slide deck (no empty or blank slides).
+- If the text is unstructured, split it into logical sections and infer appropriate slide titles.
+- Each slide must have:
+  * A clear title
+  * At least 2–4 bullet points (summarized, not full sentences)
+  * Optional notes for the speaker
+  * Optional image_from_template_hint if suitable
+- Do not skip content. If unsure how to break text, split by topics or paragraphs.
+- Keep slides concise and presentation-friendly (avoid dumping entire paragraphs).
+- Minimum: 5 slides if the text is long. Maximum: 12 slides unless the text is very long.
+- Never return empty bullets, empty titles, or blank slides.
+
 Output:
 - STRICTLY return valid JSON.
 - No comments, explanations, or text outside JSON.
